@@ -97,15 +97,15 @@ function init() {
   //勉強机
   const desk = new THREE.Group();
   {
-    const a = new THREE.Mesh(new THREE.BoxGeometry(1,10,13), new THREE.MeshPhongMaterial({color: "#333"}));
+    const a = new THREE.Mesh(new THREE.BoxGeometry(1,10,13), new THREE.MeshPhongMaterial({color: "black"}));
     desk.add(a);
     const b = a.clone();
     b.position.x = 19;
     desk.add(b);
-    const c = new THREE.Mesh(new THREE.BoxGeometry(20,1,13), new THREE.MeshPhongMaterial({color: "#333"}));
+    const c = new THREE.Mesh(new THREE.BoxGeometry(20,1,13), new THREE.MeshPhongMaterial({color: "black"}));
     c.position.set(9.5,5.5,0);
     desk.add(c);
-    const d = new THREE.Mesh(new THREE.BoxGeometry(1,24,6), new THREE.MeshPhongMaterial({color: "#333"}));
+    const d = new THREE.Mesh(new THREE.BoxGeometry(1,24,6), new THREE.MeshPhongMaterial({color: "black"}));
     d.position.set(0,17,-3.5);
     desk.add(d);
     const e = d.clone();
@@ -114,7 +114,7 @@ function init() {
     const f = d.clone();
     f.position.set(19,17,-3.5);
     desk.add(f);
-    const g = new THREE.Mesh(new THREE.BoxGeometry(20,1,6), new THREE.MeshPhongMaterial({color: "#333"}));
+    const g = new THREE.Mesh(new THREE.BoxGeometry(20,1,6), new THREE.MeshPhongMaterial({color: "black"}));
     g.position.set(9.5,29,-3.5);
     desk.add(g);
     const h = g.clone();
@@ -141,22 +141,21 @@ function init() {
     c.position.set(0,-1.9,-((2.0 * Math.tan(theta))/2));
     display.add(c);
   }
-  display.rotation.y = Math.PI/7;
-  display.position.set(-15,14,-22);
+  display.position.set(-5,14,-28);
   heya.add(display);
 
   //椅子
   const chair = new THREE.Group();
   {
-    const a = new THREE.Mesh(new THREE.BoxGeometry(1,7,1), new THREE.MeshPhongMaterial({color: "#333"}));
+    const a = new THREE.Mesh(new THREE.BoxGeometry(1,7,1), new THREE.MeshPhongMaterial({color: "black"}));
     chair.add(a);
-    const b = new THREE.Mesh(new THREE.BoxGeometry(2,1,2), new THREE.MeshPhongMaterial({color: "#333"}));
+    const b = new THREE.Mesh(new THREE.BoxGeometry(2,1,2), new THREE.MeshPhongMaterial({color: "black"}));
     b.position.y = -3;
     chair.add(b);
-    const c = new THREE.Mesh(new THREE.BoxGeometry(5,1,6), new THREE.MeshPhongMaterial({color: "#333"}));
+    const c = new THREE.Mesh(new THREE.BoxGeometry(5,1,6), new THREE.MeshPhongMaterial({color: "black"}));
     c.position.y = 3;
     chair.add(c);
-    const d = new THREE.Mesh(new THREE.BoxGeometry(5,5,1), new THREE.MeshPhongMaterial({color: "#333"}));
+    const d = new THREE.Mesh(new THREE.BoxGeometry(5,5,1), new THREE.MeshPhongMaterial({color: "black"}));
     d.position.set(0,5.5,2.5);
     chair.add(d);
   }
@@ -166,24 +165,24 @@ function init() {
   //ベッド
   const bed = new THREE.Group();
   {
-    const a = new THREE.Mesh(new THREE.BoxGeometry(16,7,42), new THREE.MeshLambertMaterial({color: "white"}));
+    const a = new THREE.Mesh(new THREE.BoxGeometry(16,5,42), new THREE.MeshLambertMaterial({color: "white"}));
     bed.add(a);
-    const b = new THREE.Mesh(new THREE.BoxGeometry(16,10,3), new THREE.MeshLambertMaterial({color: "white"}));
-    b.position.set(0,5.6,-19.5);
+    const b = new THREE.Mesh(new THREE.BoxGeometry(16,6,3), new THREE.MeshLambertMaterial({color: "white"}));
+    b.position.set(0,5.5,-19.5);
     bed.add(b);
     const c = new THREE.Mesh(new THREE.BoxGeometry(16,3,39), new THREE.MeshLambertMaterial({color: "blue"}));
-    c.position.set(0,5,1.5);
+    c.position.set(0,4,1.5);
     bed.add(c);
-    const d = new THREE.Mesh(new THREE.BoxGeometry(1,4,3), new THREE.MeshLambertMaterial({color: "white"}));
-    d.position.set(-7.5,10.5,-19.5);
+    const d = new THREE.Mesh(new THREE.BoxGeometry(1,2,3), new THREE.MeshLambertMaterial({color: "white"}));
+    d.position.set(-7.5,9.5,-19.5);
     bed.add(d);
     const e = d.clone();
-    e.position.set(7.5,10.5,-19.5);
+    e.position.set(7.5,9.5,-19.5);
     bed.add(e);
-    const f = new THREE.Mesh(new THREE.BoxGeometry(16,4,0.6), new THREE.MeshLambertMaterial({color: "white"}));
-    f.position.set(0,10.5,-20.7);
+    const f = new THREE.Mesh(new THREE.BoxGeometry(16,2,0.6), new THREE.MeshLambertMaterial({color: "white"}));
+    f.position.set(0,9.5,-20.7);
     bed.add(f);
-    const g = new THREE.Mesh(new THREE.BoxGeometry(0.9,6,8), new THREE.MeshLambertMaterial({color: "white"}));
+    const g = new THREE.Mesh(new THREE.BoxGeometry(0.9,4.5,8), new THREE.MeshLambertMaterial({color: "white"}));
     g.position.set(-8,0,16);
     bed.add(g);
     const h = g.clone();
@@ -193,7 +192,7 @@ function init() {
     i.position.set(-8,0,-1.4);
     bed.add(i);
   }
-  bed.position.set(12,3.5,-9);
+  bed.position.set(12,2.5,-9);
   heya.add(bed);
 
   //照明
@@ -309,7 +308,7 @@ function init() {
   //スイッチ
   const botton = new THREE.Group();
   {
-    const a = new THREE.Mesh(new THREE.BoxGeometry(0.2,3.5,2.3), new THREE.MeshPhongMaterial({color: "#fff2ae"}));
+    const a = new THREE.Mesh(new THREE.BoxGeometry(0.2,3.7,2.3), new THREE.MeshPhongMaterial({color: "#fff2ae"}));
     botton.add(a);
     const b = new THREE.Mesh(new THREE.BoxGeometry(0.1,0.8,1.2), new THREE.MeshPhongMaterial({color: "white"}));
     b.position.x = 0.15;
@@ -318,7 +317,7 @@ function init() {
     c.receiveShadow = true;
     botton.add(c);
   }
-  botton.position.set(-19.9,22,8);
+  botton.position.set(-19.9,21,8);
   heya.add(botton);
 
   //窓
@@ -335,19 +334,19 @@ function init() {
     const d = c.clone();
     d.position.set(0,-9.2,18.3);
     mado.add(d);
-    const e  = new THREE.Mesh( new THREE.BoxGeometry(1,18,1), new THREE.MeshPhongMaterial({color: "#333"}));
+    const e  = new THREE.Mesh( new THREE.BoxGeometry(1,18,1), new THREE.MeshPhongMaterial({color: "black"}));
     e.position.set(1.5,0,0.7);
     mado.add(e);
     const f = e.clone();
-    f.position.set(1.5,0,18.5);
+    f.position.set(1.5,0,18.2);
     mado.add(f);
     const g = e.clone();
-    g.position.set(0.5,0,18.4);
+    g.position.set(0.5,0,18.6);
     mado.add(g);
     const h = e.clone();
     h.position.set(0.5,0,36.1);
     mado.add(h);
-    const i = new THREE.Mesh( new THREE.BoxGeometry(1,1.4,18), new THREE.MeshPhongMaterial({color: "#333"}));
+    const i = new THREE.Mesh( new THREE.BoxGeometry(1,1.4,18), new THREE.MeshPhongMaterial({color: "black"}));
     i.position.set(1.5,8.3,9.2);
     mado.add(i);
     const j = i.clone();
@@ -359,8 +358,8 @@ function init() {
     const l = i.clone();
     l.position.set(0.5,-8.3,27.2);
     mado.add(l);
-    const m = new THREE.Mesh( new THREE.BoxGeometry(0.2,15.2,16.9), new THREE.MeshLambertMaterial({color: "skyBlue"}));
-    m.position.set(1.5,0,9.7);
+    const m = new THREE.Mesh( new THREE.BoxGeometry(0.2,15.2,16.5), new THREE.MeshLambertMaterial({color: "skyBlue"}));
+    m.position.set(1.5,0,9.5);
     mado.add(m);
     const n = m.clone();
     n.position.set(0.5,0,27.3);
@@ -372,22 +371,22 @@ function init() {
   //コンセント
   const con = new THREE.Group();
   {
-    const a = new THREE.Mesh(new THREE.BoxGeometry(0.2,3.5,2.1), new THREE.MeshPhongMaterial({color: "#fff2ae"}));
+    const a = new THREE.Mesh(new THREE.BoxGeometry(0.2,3.7,2.3), new THREE.MeshPhongMaterial({color: "#fff2ae"}));
     con.add(a);
-    const b = new THREE.Mesh(new THREE.BoxGeometry(0.1,2,1), new THREE.MeshPhongMaterial({color: "white"}));
+    const b = new THREE.Mesh(new THREE.BoxGeometry(0.1,2,1.2), new THREE.MeshPhongMaterial({color: "white"}));
     b.position.x = 0.15;
     con.add(b);
     const c = new THREE.Mesh(new THREE.BoxGeometry(0.1,0.3,0.1), new THREE.MeshPhongMaterial({color: "black"}));
-    c.position.set(0.2,0.4,0.15);
+    c.position.set(0.2,0.3,0.2);
     con.add(c);
     const d = c.clone();
-    d.position.set(0.2,0.4,-0.15);
+    d.position.set(0.2,0.3,-0.2);
     con.add(d);
     const e = c.clone();
-    e.position.set(0.2,-0.4,0.15);
+    e.position.set(0.2,-0.3,0.2);
     con.add(e);
     const f = c.clone();
-    f.position.set(0.2,-0.4,-0.15)
+    f.position.set(0.2,-0.3,-0.2)
     con.add(f);
 
   }
@@ -400,72 +399,21 @@ function init() {
     const textureLoader = new THREE.TextureLoader();
     const watchgara = textureLoader.load("watch.jpg");
     const watchMaterial = new THREE.MeshPhongMaterial({map: watchgara});
-    const a = new THREE.Mesh(new THREE.CylinderGeometry(3, 3, 0.6, 24, 1),
+    const a = new THREE.Mesh(new THREE.CylinderGeometry(4, 4, 0.6, 24, 1),
     [new THREE.MeshLambertMaterial({color: "black"}),
       new THREE.MeshLambertMaterial({color: "black"}),
       watchMaterial]
     );
-    a.rotation.z = -Math.PI/2;
-    a.rotation.y = -Math.PI/2;
-    watch.add(a);
+    scene.add(a);
   }
-  watch.position.set(10,29,29.7);
-  heya.add(watch);
+//ダンベル
+//時計
+//服のやつ
+//鏡
+//ゴミ箱
 
-  //ダンベル
-  const dan = new THREE.Group();
-  {
-    const a =  new THREE.Mesh(new THREE.CylinderGeometry(0.37, 0.37, 10, 30), new THREE.MeshPhongMaterial({color: "#C0C0C0"}));
-    dan.add(a);
-    const b = new THREE.Mesh(new THREE.CylinderGeometry(2.3, 2.3, 0.8, 24, 1),new THREE.MeshPhongMaterial({color: "#333"}));
-    b.position.y = -2.5;
-    dan.add(b);
-    const c = b.clone();
-    c.position.y = 2.5;
-    dan.add(c);
-    const d = new THREE.Mesh(new THREE.CylinderGeometry(1.8, 1.8, 0.8, 24, 1),new THREE.MeshPhongMaterial({color: "#333"}));
-    d.position.y = -3.1;
-    dan.add(d);
-    const e = d.clone();
-    e.position.y = 3.1;
-    dan.add(e);
-    const f = new THREE.Mesh(new THREE.CylinderGeometry(1.3, 1.3, 0.8, 24, 1),new THREE.MeshPhongMaterial({color: "#333"}));
-    f.position.y = -3.7;
-    dan.add(f);
-    const g = f.clone();
-    g.position.y = 3.7;
-    dan.add(g);
-    const h = new THREE.Mesh(new THREE.CylinderGeometry(0.6, 0.5, 0.3, 24, 1),new THREE.MeshPhongMaterial({color: "red"}));
-    h.position.y = -4.2;
-    dan.add(h);
-    const i = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.6, 0.3, 24, 1),new THREE.MeshPhongMaterial({color: "red"}));
-    i.position.y = 4.2;
-    dan.add(i);
-  }
-  dan.rotation.x = Math.PI/2;
-  dan.rotation.z = Math.PI/3;
-  dan.position.set(11,2.3,22);
-  const dan2 = dan.clone();
-  dan2.rotation.z = Math.PI/9;
-  dan2.position.set(2,2.3,19);
-  heya.add(dan2);
-  heya.add(dan);
-
-  //ゴミ箱
-  const dust = new THREE.Group();
-  {
-    const a = new THREE.Mesh(new THREE.CylinderGeometry(2, 1.7, 5, 24, 1),new THREE.MeshPhongMaterial({color: "#5B4134"}));
-    dust.add(a);
-    const b = new THREE.Mesh(new THREE.CylinderGeometry(1.8, 1.6, 0.1, 24, 1), new THREE.MeshPhongMaterial({color: "#333"}));
-    b.position.y = 2.5;
-    dust.add(b);
-  }
-  dust.position.set(-18,2.5,0);
-  heya.add(dust);
-
-  heya.position.y = -80;
-
-  //光源の設定
+heya.position.y = -100;
+  //光源の作成
   const light1 = new THREE.DirectionalLight(0xffffff, 0.4);
   light1.position.set(0, 28, 0);
   light1.castShadow = true;
@@ -480,32 +428,6 @@ function init() {
   light4.position.set(-20, 22, 22);
   light4.castShadow = true;
   heya.add(light4);
-
-  //光のon/off
-  let ligthLive = false;
-  function ligthon(){
-    ligthLive = true;
-    light1.intensity = 0;
-    light2.intensity = 0.2;
-    light3.intensity = 0;
-    light4.intensity = 0;
-  }
-  function lightoff(){
-    ligthLive = false;
-    light1.intensity = 0.4;
-    light2.intensity = 0.4;
-    light3.intensity = 200;
-    light4.intensity = 1;
-  }
-  window.addEventListener("mousedown", () =>{
-    if(!ligthLive){
-      ligthon();
-    }else{
-      lightoff();
-    }
-  });
-
-  heya.scale.set(4,4,4);
 
   //影の設定
   heya.children.forEach((child) => {
