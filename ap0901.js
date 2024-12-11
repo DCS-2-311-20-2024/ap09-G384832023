@@ -463,7 +463,7 @@ function init() {
   dust.position.set(-18,2.5,0);
   heya.add(dust);
 
-  heya.position.y = -80;
+  heya.position.y = -20;
 
   //光源の設定
   const light1 = new THREE.DirectionalLight(0xffffff, 0.4);
@@ -504,8 +504,6 @@ function init() {
       lightoff();
     }
   });
-
-  heya.scale.set(4,4,4);
 
   //影の設定
   heya.children.forEach((child) => {
